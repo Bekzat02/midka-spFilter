@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -20,9 +21,19 @@ public class Main {
         circles.add(c4);
 
         circles=new RadiusFilter().filter(circles);
-
-        for(Circle cs:circles){
-            System.out.println(", ID: "+cs.id+", Radius: "+cs.radius+", Diameter:  "+ cs.diameter);
+        List<Circle> circles1=new RadiusFilter().filter(circles);
+        System.out.println("choose the option 1) Radius 2)Diameter");
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        if(a==1) {
+            for (Circle cs : circles) {
+                System.out.println(", ID: " + cs.id + ", Radius: " + cs.radius);
+            }
+        }
+        else if(a==2) {
+            for (Circle cs : circles1) {
+                System.out.println(", ID: " + cs.id + ", Diameter:  " + cs.diameter);
+            }
         }
     }
 }

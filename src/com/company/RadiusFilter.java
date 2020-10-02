@@ -17,5 +17,14 @@ public class RadiusFilter implements IFilter {
         }
         return list;
     }
+    public List<Circle> filter1(List<Circle> circles) {
+        List<Circle> list=new ArrayList<>();
+        for(Circle circle:circles){
+            if(circle.diameter>6.44){
+                list.add(circle);
+            }
+        }
+        return list;
+    }
     //
 }
