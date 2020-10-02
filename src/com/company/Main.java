@@ -21,7 +21,7 @@ public class Main {
         circles.add(c4);
 
         circles=new RadiusFilter().filter(circles);
-        List<Circle> circles1=new RadiusFilter().filter(circles);
+        List<Circle> circles1=new RadiusFilter().filter1(circles);
         System.out.println("choose the option 1) Radius 2)Diameter");
         Scanner s=new Scanner(System.in);
         int a=s.nextInt();
